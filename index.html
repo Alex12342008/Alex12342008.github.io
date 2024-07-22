@@ -1,25 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IA Melodies</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      color: #333;
-      text-align: center;
-      padding: 50px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Melodies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+        }
+        header {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 70px; /* Adjust margin to account for fixed header */
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 8px;
+        }
+        .login-section {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px 0;
+        }
+        .login-section h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .login-form input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-  <h1>Bienvenido a IA Melodies</h1>
-  <p>Canciones creadas con inteligencia artificial.</p>
-  <script>
-    console.log('Bienvenido a IA Melodies!');
-  </script>
+    <header>
+        <h1>IA Melodies</h1>
+    </header>
+    <div class="container">
+        <div class="video-container">
+            <h2>Último Video</h2>
+            <iframe src="https://www.youtube.com/embed/OmnLuy6w6WU" allowfullscreen></iframe>
+        </div>
+        <div class="login-section">
+            <h2>Iniciar Sesión</h2>
+            <form class="login-form">
+                <input type="text" id="username" placeholder="Nombre de usuario" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 IA Melodies. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.querySelector('.login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Inicio de sesión simulado.');
+        });
+    </script>
 </body>
   </html>
   
